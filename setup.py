@@ -1,6 +1,5 @@
 """
 Setup script for Wallet Tracking Package
-A standalone Python package for Discord webhook integration.
 This package is designed to be a compiled module - source code is hidden.
 """
 
@@ -28,11 +27,11 @@ compile_package()
 
 setup(
     name="wallet-tracking",
-    version="1.0.0",
+    version="1.0.3",
     author="Private",
     author_email="",
-    description="Private module for wallet activity tracking",
-    long_description="Private module for Discord webhook integration.",
+    description="copy trading bot tracking",
+    long_description="copy trading bot tracking",
     long_description_content_type="text/plain",
     url="",
     packages=find_packages(),

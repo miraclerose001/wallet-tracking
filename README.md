@@ -1,10 +1,14 @@
 # Wallet Tracking Package
 
-Private Python package for Discord webhook integration to track wallet activities.
-
 ## Installation
 
-### Option 1: Install from local directory (Development)
+### Option 1: Install from PyPI (Recommended for Production)
+
+```bash
+pip install wallet-tracking
+```
+
+### Option 2: Install from local directory (Development)
 
 ```bash
 # Navigate to the package directory
@@ -17,7 +21,7 @@ pip install -e .
 pip install .
 ```
 
-### Option 2: Build and install wheel
+### Option 3: Build and install wheel
 
 ```bash
 # Build the package
@@ -27,7 +31,7 @@ python setup.py sdist bdist_wheel
 pip install dist/wallet_tracking-1.0.0-py3-none-any.whl
 ```
 
-### Option 3: Install from source (Production)
+### Option 4: Install from source (Production)
 
 ```bash
 # Copy package to target location and install
@@ -86,6 +90,10 @@ python -m build
 
 - Python >= 3.8
 - requests >= 2.28.0
+
+## Deployment
+
+To deploy this package to PyPI, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for step-by-step instructions.
 
 
 
