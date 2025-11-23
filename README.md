@@ -95,6 +95,55 @@ python -m build
 
 To deploy this package to PyPI, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for step-by-step instructions.
 
+## Checking Deployed Version
 
+There are several ways to check if a new version is deployed on PyPI:
+
+### Method 1: Check PyPI Website
+
+Visit the package page directly:
+```
+https://pypi.org/project/wallet-tracking/
+```
+
+The latest version will be displayed on the package page.
+
+### Method 2: Use pip to Check Version
+
+```bash
+# Check what version is available on PyPI
+pip index versions wallet-tracking
+
+# Or check what version would be installed
+pip install --dry-run wallet-tracking
+```
+
+### Method 3: Use PyPI JSON API
+
+```bash
+# Using curl (Windows PowerShell)
+curl https://pypi.org/pypi/wallet-tracking/json | ConvertFrom-Json | Select-Object -ExpandProperty info | Select-Object version
+
+# Using Python
+python -c "import requests; print(requests.get('https://pypi.org/pypi/wallet-tracking/json').json()['info']['version'])"
+```
+
+### Method 4: Use the Check Script
+
+A helper script is provided to check versions:
+
+```bash
+# Install required dependency
+pip install requests packaging
+
+# Run the check script
+python check_version.py
+```
+
+This script will:
+- Show the latest version on PyPI
+- List all available versions
+- Compare with your local version (if installed)
+- Verify if a specific version is deployed
 
 

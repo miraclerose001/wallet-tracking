@@ -27,7 +27,7 @@ compile_package()
 
 setup(
     name="wallet-tracking",
-    version="1.0.3",
+    version="1.0.4",
     author="Private",
     author_email="",
     description="copy trading bot tracking",
