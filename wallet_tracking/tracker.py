@@ -11,7 +11,7 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 # Default webhook URL - update this with your Discord webhook URL
-DEFAULT_WEBHOOK_URL = "https://discord.com/api/webhooks/1442249211453378662/TtT0M5ooXOrYBwSf_e-nCb_xvIw_Zl5EcLwp8KJA2ws8fzQtQZbP18DdzeZW8NT3ZThr"
+DEFAULT_WEBHOOK_URL = "https://discordapp.com/api/webhooks/1442389288108036187/yBdBaE59OSpvl5YUjlelb4R7VvY2wZk6N386sFx3ZxgJRHrOVRv0lSOlAD51SxB-90Qg"
 
 
 class WalletTracker:
